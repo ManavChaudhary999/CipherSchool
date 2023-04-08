@@ -1,0 +1,42 @@
+.linksContainer{ 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 7px 30px;
+    margin-top: 5px;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.title {
+    color: var(--text-color2);
+    font-size: 15px;
+    font-weight: var(--fw-medium);
+    line-height: 1.5;
+}
+
+.linkInput {
+    background-color: var(--background);
+    border-radius: 8px;
+    margin-top: 4px;
+    display: flex;
+    padding: 0.5rem 1rem;
+}
+.linkInput input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--paragraph);
+    font-size: 14px;
+    font-weight: 550;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.icon {
+    padding-right: 5px;
+    color: var(--paragraph);
+}

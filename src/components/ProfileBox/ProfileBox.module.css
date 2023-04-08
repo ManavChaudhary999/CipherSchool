@@ -1,0 +1,140 @@
+.wrapper{
+    position: sticky;
+    top: 62px;
+    z-index: 99;
+    background: var(--profile-cover);
+    height: 110px;
+    padding: 5px 60px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.userAvatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
+.userAvatar img {
+    width: 100%;
+    border-radius: 50%;
+}
+.userAvatar button {
+    background-color: #202b47;
+    border: none;
+    outline: none;
+    padding: 0;
+    width: 40%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-top: -12px;
+}
+.userAvatar svg {
+    color: #fff;
+    width: 70%;
+    height: 70%;
+}
+
+.userDetails {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    color: var(--text-color2);
+    line-height: 1.25;
+}
+.greeting {
+    font-weight: var(--fw-normal);
+    font-size: 20px;
+    padding: 0 5px;
+    margin: 0;
+}
+.username {
+    font-size: 24px;
+    font-weight: var(--fw-bold);
+    margin-bottom: 2px;
+    padding: 0 5px;
+    margin: 0;
+    margin-bottom: 2px;
+}
+.email {
+    font-size: 16px;
+    font-weight: var(--fw-normal);
+    padding: 0 5px;
+    margin: 0;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    height: 100px;
+    width: auto;
+}
+.followers {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    text-align: center;
+    color: var(--heading);
+    font-size: 17px;
+    font-weight: var(--fw-medium);
+}
+
+
+@media screen and (max-width: 1024px) {
+    .wrapper {
+        padding: 5px 30px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .userAvatar {
+        width: 50px;
+        height: 50px;
+    }
+    .greeting {
+        font-size: 16px;
+    }
+    .username {
+        font-size: 20px;
+    }
+    .email {
+            font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    .userDetails {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .right {
+        height: 20px;
+        padding: 0 5px;
+    }
+    .userAvatar {
+        width: 70px;
+        height: 70px;
+    }
+}

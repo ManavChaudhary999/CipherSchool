@@ -1,0 +1,7 @@
+.wrapper{
+    background: var(--border-color);
+    width: 100%;
+    border-radius: 0.5px;
+    height: 1px;
+    margin: 1.5rem 0 1rem;
+}

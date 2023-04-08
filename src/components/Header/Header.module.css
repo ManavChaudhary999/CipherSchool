@@ -1,4 +1,7 @@
 .navWrapper{
+    position: sticky;
+    top: 0;
+    z-index: 99;
     background-color: var(--background);
     border: 1px solid var(--border-color);
     height: 60px;
@@ -6,6 +9,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0px 15px;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .navLeft {
@@ -82,7 +86,7 @@
 }
 
 .notificationContainer {
-    color: inherit;
+    color: var(--text-color);
     display: flex;
     align-items: flex-start;
     gap: 2px;
@@ -207,9 +211,6 @@
     .navRight {
         padding-right: 10px;
     }
-}
-
-@media screen and (max-width: 400px) {
     .logoContainer h1{
         display: none;
     }

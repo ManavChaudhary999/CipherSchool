@@ -1,23 +1,15 @@
 import React from 'react';
 import styles from './Header.module.css';
 
+import {Search, Filter, Bell, Sun, Moon} from "react-feather";
 import Logo from "../../assets/Logo";
 import Logo2 from "../../assets/Logo2";
 import Profile from "../../assets/Profile";
-import {Search, Filter, Bell, Sun, Moon} from "react-feather";
+import { ThemeContext } from '../ThemeProvider';
 
 function Header() {
-  const [theme, setTheme] = React.useState('light');
+  const {colorMode: theme, setColorMode} = React.useContext(ThemeContext);
   const transitionMode = theme === 'light' ? styles.thumbLeft : styles.thumbRight;
-
-  function handleThemeSelect(){
-    if(theme === 'light'){
-      setTheme('dark');
-    }
-    else {
-      setTheme('light');
-    }
-  }
 
   return(
     <header className={styles.navWrapper}>
@@ -49,7 +41,7 @@ function Header() {
           <span>0</span>
         </div>
 
-        <div className={styles.themeContainer} onClick={handleThemeSelect}>
+        <div className={styles.themeContainer} onClick={setColorMode}>
           <div className={`${styles.thumb} ${transitionMode}`}></div>
           <div className={styles.themeLeft}><Sun size={18} /></div>
           <div className={styles.themeRight}><Moon size={18} /></div>
